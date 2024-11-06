@@ -17,6 +17,7 @@
         gap: 20px;
         .header{
             @include header-style(90px);
+            font-size: clamp(60px, 2vw + 10px, 90px);
             .heart-text-color{
                 background-image: $button-background;
                 background-clip: text;
@@ -43,11 +44,11 @@
         
     }
     .robot-animation-section{
-        max-height: 500px;
-        height: 100%;
         position: relative;
         .animate-switch{
             animation: fade-in-out 3s alternate infinite;
+            max-width: 80dvw;
+            max-height: auto;
         }
     }
 
@@ -61,3 +62,4 @@
     }
 
 }
+
