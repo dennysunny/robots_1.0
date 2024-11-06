@@ -23,6 +23,7 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 20px 0;
+        gap: 40px;
 
         .subscription-box{
             border: 1px solid $default-text-color;
@@ -63,12 +64,12 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-        width: 100%;
+        gap: 40px;
 
         .robots-tagline{
             display: flex;
             flex-direction: column;
-            max-width: 30%;
+            min-width: 30%;
 
             .robots-logo{
                 display: flex;
@@ -81,12 +82,13 @@
             justify-content: space-between;
             flex-wrap: wrap;
             align-items: flex-start;
-            width: 70%;
+            gap: 40px;
+            flex-grow: 1;
+            flex-wrap: wrap;
 
             .robots-site-info-section{
                 display: flex;
                 flex-direction: column;
-                flex-wrap: wrap;
                 align-items: flex-start;
                 gap: 8px;
 
