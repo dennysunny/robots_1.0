@@ -1,7 +1,10 @@
 <div class="header-wrapper">
     <div (click)="navigateToSelectedRoute('')" style="cursor: pointer;">
-        <img [src]="baseHeaderUrl" alt="robots-logo">
+        <img [src]="baseHeaderUrl+'Logo-header.svg'" alt="robots-logo">
     </div>
+    <button class="expand-header-routes">
+        <img [src]="baseHeaderUrl+'hamburger-menu.svg'" alt="robots-logo">
+    </button>
     <div class="header-routes">
         @for(route of headerRoutes; track route.id){
             @if(route.name.toLowerCase()=='collection'){
