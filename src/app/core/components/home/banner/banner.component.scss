@@ -46,7 +46,7 @@
     .robot-animation-section{
         position: relative;
         .animate-switch{
-            animation: fade-in-out 3s alternate infinite;
+            animation: fade-in-out 3s infinite;
             max-width: 80dvw;
             max-height: auto;
         }
@@ -54,10 +54,19 @@
 
     @keyframes fade-in-out {
         0%{
-            opacity: 0;
+            opacity: 0.2;
+        }
+        25%{
+            opacity: 0.5;
+        }
+        50%{
+            opacity: 0.8;
+        }
+        75%{
+            opacity: 0.6;
         }
         100%{
-            opacity: 1;
+            opacity: 0.5;
         }
     }
 

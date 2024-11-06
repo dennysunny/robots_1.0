@@ -3,7 +3,12 @@
     <div class="app-wrapper">
         <div class="container-fluid">
             <router-outlet></router-outlet>
-            <app-footer/>
+            @defer (on viewport ) {
+                <app-footer/>
+            }@placeholder {
+              <app-loader/>
+            }
+            
         </div>
     </div>
 </div>
