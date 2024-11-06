@@ -1,0 +1,52 @@
+@import '../../../../../common-variables.scss';
+
+.accordion-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .accordionContents{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 70%;
+
+    .accordion-header{
+        text-align: center;
+        @include header-style(60px);
+        color: $default-text-color;
+        padding-bottom: 40px;
+    }
+    
+    .accordion-box{
+        border: 2px solid $default-text-color;
+        padding: 20px 24px;
+        cursor: pointer;
+
+        .accordion-title{
+            color: $default-text-color;
+            @include header-style(36px);
+        }
+
+        .expanded-accordion{
+            height: 0;
+            transition: height 0.3s ease-in-out;
+            background: transparent;
+            overflow: hidden;
+            padding-top: 10px;
+            display: none;
+            .accordion-contents{
+                color: $default-text-color;
+                text-wrap: balance ;
+                font-family: Space_Mono_Regular;
+                font-size: 24px;
+            }
+        }
+
+        .expanded-accordion.open{
+            display: block;
+            height: auto;
+        }
+    }
+}
+}

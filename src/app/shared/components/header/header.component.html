@@ -1,0 +1,15 @@
+<div class="header-wrapper">
+    <div (click)="navigateToSelectedRoute('')" style="cursor: pointer;">
+        <img [src]="baseHeaderUrl" alt="robots-logo">
+    </div>
+    <div class="header-routes">
+        @for(route of headerRoutes; track route.id){
+            @if(route.name.toLowerCase()=='collection'){
+                <button (click)="navigateToSelectedRoute(route.url)">{{route.name}} </button>
+            }@else{
+                <span (click)="navigateToSelectedRoute(route.url)">{{route.name}}</span>
+            }
+            
+        }
+    </div>
+</div>

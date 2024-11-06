@@ -1,0 +1,31 @@
+$button-background: linear-gradient(to right, rgb(255, 0, 179), orangered);
+$button-hover-color: rgb(255, 0, 179);
+$default-text-color: white;
+
+@mixin gradient-button-style($padding-v, $padding-h, $font-size) {
+    outline: none;
+    border: none;
+    background: $button-background;
+    color: $default-text-color;
+    font-size: $font-size;
+    padding: $padding-v $padding-h;
+    cursor: pointer;
+    font-family: Space_Mono_Bold;
+    transition: hover 0.5s ease-in-out;
+    &:hover{
+        background: $button-hover-color;
+    }
+}
+
+@mixin flex-properties($direction, $justify-type, $align-type){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-type;
+    align-items: $align-type;
+}
+
+@mixin header-style($font-size){
+    font-family: Archivo_Black;
+    font-size: $font-size;
+    font-stretch: ultra-expanded;
+}

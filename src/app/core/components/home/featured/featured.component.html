@@ -1,0 +1,16 @@
+<div class="featured-robots-wrapper">
+    <div class="featured-robots-title">
+        Featured Robots
+    </div>
+
+    <div class="featured-robots">
+        @for (robot of featuredRobotsList; track robot.id) {
+            <app-robot-profile-card
+            [robotAvatar]="robot.avatar"
+            [robotName]="robot.name"
+            [robotBriefInfo]="robot.description"
+            [robotPrice]="robot.price"
+            />
+        }
+    </div>
+</div>

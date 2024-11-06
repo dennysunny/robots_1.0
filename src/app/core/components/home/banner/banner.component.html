@@ -1,0 +1,28 @@
+<div class="banner-wrapper">
+    <div class="header-section">
+       
+            <span class="header">
+                Made with <span class="heart-text-color">heart</span>,<br/> by a <span class="robot-text-color">robot</span>.
+            </span>
+            <span class="sub-header">
+                collect unique art pieces entirely made <br>
+                by an android with human feelings
+            </span>
+            <div class="discover-collections-button">
+                <button  (click)="navigateToRobotCollections()">
+                Discover More Collections
+                </button>
+            </div>
+        
+    </div>
+
+    <div class="robot-animation-section">
+        <img 
+        [src]="imageArray[visibleImageIndex]" 
+        alt="" 
+        class="animate-switch" 
+        >
+        
+    </div>
+</div>
+

@@ -1,0 +1,61 @@
+@import '../../../../../common-variables.scss';
+
+.banner-wrapper{
+    width: 100%;
+    padding: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-section{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: $default-text-color;
+        gap: 20px;
+        .header{
+            @include header-style(90px);
+            .heart-text-color{
+                background-image: $button-background;
+                background-clip: text;
+                color: transparent;
+            }
+            .robot-text-color{
+                color: rgb(67, 115, 247);
+            }
+        }
+        .sub-header{
+            font-weight: 400;
+            font-size: 24px;
+            font-family: Space_Mono_Regular;
+            &::first-letter{
+                text-transform: capitalize;
+            }
+        }
+        .discover-collections-button{
+            padding-top: 8px;
+            button{
+                @include gradient-button-style(20px, 24px, 16px);
+            }
+        }
+        
+    }
+    .robot-animation-section{
+        max-height: 500px;
+        height: 100%;
+        position: relative;
+        .animate-switch{
+            animation: fade-in-out 3s alternate infinite;
+        }
+    }
+
+    @keyframes fade-in-out {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+}

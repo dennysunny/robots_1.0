@@ -1,0 +1,11 @@
+<div class="primary-features-wrapper">
+    @for (data of featuresData; track data.id) {
+      <div class="feature-container">
+        <img [src]="data.imageUrl" alt="unique face">
+        <div class="feature-info-container">
+            <span class="feature-title">{{data.title}}</span>
+            <span class="feature-description">{{data.description}}</span>
+        </div>
+      </div>
+    }
+</div>

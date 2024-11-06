@@ -1,0 +1,21 @@
+@import '../../../../../common-variables.scss' ;
+
+.featured-robots-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+    .featured-robots-title{
+        @include header-style(60px);
+        text-align: center;
+        color: $default-text-color;
+        padding-bottom: 20px;
+    }
+
+    .featured-robots{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

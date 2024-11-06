@@ -1,0 +1,57 @@
+@import '../../../../common-variables.scss';
+
+.robot-profile-card-wrapper{
+    max-width: 400px;
+    max-height: 800px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    .robot-avatar{
+        max-width: 280px;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.2)
+        }
+    }
+    .robot-info{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+            color: $default-text-color;
+            text-wrap: wrap;
+            text-align: center;
+            &:first-of-type{
+                @include header-style(24px);
+                font-weight: 700;
+            }
+
+            &:nth-of-type(2){
+                font-size: 18px;
+                font-family: Space_Mono_Regular;
+            }
+
+            &:last-of-type{
+                font-size: 24px;
+                font-family: Space_Mono_Regular;
+            }
+        }
+    }
+    .check-out-button{
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        button{
+            @include gradient-button-style(20px, 24px, 16px);
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

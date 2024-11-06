@@ -1,0 +1,31 @@
+@import '../../../../common-variables.scss';
+
+.header-wrapper{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 40;
+
+    .header-routes{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+            span{
+                color: $default-text-color;
+                font-family: Space_Mono_Bold;
+                cursor: pointer;
+            }
+            button{
+                @include gradient-button-style(20px, 24px, 16px)
+            }
+    }
+}

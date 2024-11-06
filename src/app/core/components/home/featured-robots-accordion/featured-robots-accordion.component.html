@@ -1,0 +1,18 @@
+<div class="accordion-wrapper">
+
+    <div class="accordionContents">
+        <div class="accordion-header">
+            <span>Featured Robots</span>
+        </div>
+    
+        @for ( data of accordionData; track data.id) {
+            <div class="accordion-box"  (click)="toggleAccordion(data.id)">
+                <span class="accordion-title">{{data?.header}}</span>
+                <div class="expanded-accordion" [class.open]="data.isOpen" >
+                    <span class="accordion-contents">{{data.content}}</span>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

@@ -1,0 +1,62 @@
+<div class="footer-wrapper">
+
+    <!-- news letter subscription -->
+    <div class="news-letter">
+        <div>
+            <span>
+                Join the newsletter to keep <br/>
+                up with new collections.
+            </span>
+        </div>
+
+        <div class="subscription-box">
+            <div>
+                <img [src]="userIcon" alt="user-icon" style="max-width: 15px; max-height: 15px;">
+                <input type="email" placeholder="Enter your email" />
+            </div>
+            <button>Subscribe</button>
+        </div>
+
+    </div>
+
+    <!-- website info -->
+    <div class="website-info">
+        
+        <div class="robots-tagline">
+            <div class="robots-logo">
+                <img [src]="footerLogo" alt="logo" style="max-width: 200px;" >
+            </div>
+            <span>Made with heart, by a robot.</span>
+        </div>
+
+        <div class="robots-site-info">
+            @for (info of siteInfoSections; track info.id) {
+                <div class="robots-site-info-section">
+                    <span class="site-info-header">{{info.header}}</span>
+                        @for(item of info.contents; track $index){
+                            <span class="site-info-contents" >{{item}}</span>
+                        }
+                </div>
+            }
+
+            <div class="robots-site-info-section">
+                <span class="site-info-header">Social</span>
+                <div class="social-icons">
+                    @for(icons of socialIcons; track $index){
+                        <div class="icons-border">
+                            <img [src]="icons.url" alt="icons.name">
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- copyright -->
+    <div class="copyright-section">
+        <span>&copy; 2024 Robots Inc. All rights reserved.</span>
+    </div>
+
+</div>

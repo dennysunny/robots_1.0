@@ -1,0 +1,13 @@
+<div class="robot-profile-card-wrapper">
+    <div class="robot-avatar">
+        <img [src]="robotAvatar()"  alt="robot avatar"/>
+    </div>
+    <div class="robot-info">
+        <span>{{robotName()}}</span>
+        <span>{{robotBriefInfo()}}</span>
+        <span>{{robotPrice() | currency:'USD':'symbol':'1.0-0'  }}  </span>
+    </div>
+    <div class="check-out-button">
+        <button>Check it Out</button>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+@import '../../../../../common-variables.scss';
+
+.club-access-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0;
+
+    .club-access-avatar{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        transition: transform 0.5s ease-in-out;
+        &:hover{
+            transform: scale(1.1)
+        }
+    }
+
+    .club-info{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+    .club-ticket-info{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        span{
+            &:first-of-type{
+                @include header-style(60px);
+                color: $default-text-color;
+            }
+            &:last-of-type{
+                font-size: 24px;
+                color: $default-text-color;
+                font-family: Space_Mono_Regular;
+            }
+        }
+
+        .learn-more-button{
+            button{
+                @include gradient-button-style(20px, 24px, 16px);
+                background: $button-background;
+            }
+        }
+    }
+}
+}
