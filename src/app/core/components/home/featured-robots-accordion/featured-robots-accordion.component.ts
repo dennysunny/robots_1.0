@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class FeaturedRobotsAccordionComponent {
 
+  baseImageUrl :string = "assets/images/accordion/"
+
   accordionData :any[] = [
     {
       id: 1,
