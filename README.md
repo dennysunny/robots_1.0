@@ -6,22 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Screenshots
+![image](https://github.com/user-attachments/assets/188d0f95-ebf6-42a2-b4bc-c5f7ee929438)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Screenshot_2024-11-06-17-11-12-057_com android chrome](https://github.com/user-attachments/assets/c5b457d7-71b7-40a6-a749-d1cd301867bc)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Screenshot_20241106_171134_Chrome](https://github.com/user-attachments/assets/0781a825-2c81-44b8-a0ae-fdbcda34af9a)
