@@ -1,7 +1,15 @@
 <div class="home-contents-wrapper">
-    <app-banner/>
+    @defer  {
+        <app-banner/>
+    }@loading {
+        <app-loader/>  
+    }
     <app-robot-primary-features/>
-    <app-featured/>
+    @defer(on viewport) {
+        <app-featured/>
+    }@placeholder {
+        <app-loader/> 
+    }
     <app-club-access/>
     <app-featured-robots-accordion/>
 </div>

@@ -1,0 +1,8 @@
+@import '../../../../common-variables.scss';
+
+div{
+    @include flex-properties(row, center, center);
+    button{
+        @include gradient-button-style(20px, 24px, 18px);
+    }
+}

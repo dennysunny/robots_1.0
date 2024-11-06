@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, effect, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss'
 })
@@ -21,17 +22,18 @@ export class BannerComponent {
   #activatedRoute = inject(ActivatedRoute);
 
   ngOnInit() {
-
-      this.interval = setInterval(()=>{
-        this.visibleImageIndex = (this.visibleImageIndex+1) % this.imageArray.length
-      },3000)
-
+    //interval to switch between robo images
+    this.interval = setInterval(()=>{
+      this.visibleImageIndex = (this.visibleImageIndex+1) % this.imageArray.length
+    },3000)
   }
 
+  //navigate to robot collections page
   navigateToRobotCollections(){
     this.#router.navigate(['collections'],{relativeTo: this.#activatedRoute})
   }
 
+  //clear interval on component unmount
   ngOnDestroy() {
     if(this.interval){
       clearInterval(this.interval)

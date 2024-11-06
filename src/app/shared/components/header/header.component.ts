@@ -23,6 +23,7 @@ export class HeaderComponent {
 
   navigateToSelectedRoute(path :string){
     this.#router.navigate([`robots/${path}`])
+    this.toggleHeaderMenuList();
   }
 
   toggleHeaderMenuList(){
