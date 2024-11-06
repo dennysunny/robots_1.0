@@ -3,7 +3,7 @@
 .club-access-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     padding: 20px 0;
@@ -11,15 +11,17 @@
     .club-access-avatar{
         display: flex;
         justify-content: center;
-        width: 50%;
         transition: transform 0.5s ease-in-out;
         &:hover{
             transform: scale(1.1)
         }
+        img{
+            max-width: 70dvw;
+            height: auto;
+        }
     }
 
     .club-info{
-        width: 50%;
         display: flex;
         justify-content: center;
 

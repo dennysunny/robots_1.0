@@ -7,7 +7,13 @@
     
         @for ( data of accordionData; track data.id) {
             <div class="accordion-box"  (click)="toggleAccordion(data.id)">
-                <span class="accordion-title">{{data?.header}}</span>
+                <div class="accordion-content-title">
+                    <span class="accordion-header">{{data?.header}}</span>
+                    <img 
+                    [class.open] = "data.isOpen"
+                    [src]="baseImageUrl+'drop-down-icon.svg'" 
+                    alt="drop-down-icon">
+                </div>
                 <div class="expanded-accordion" [class.open]="data.isOpen" >
                     <span class="accordion-contents">{{data.content}}</span>
                 </div>

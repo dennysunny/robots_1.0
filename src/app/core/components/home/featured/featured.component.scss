@@ -17,5 +17,14 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 40px ;
+    }
+}
+
+@media (max-width : 768px){
+    .featured-robots-wrapper{
+        .featured-robots{
+            justify-content: center;
+        }
     }
 }

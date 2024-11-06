@@ -7,6 +7,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 20px 0;
+    gap: 40px;
 
     .feature-container{
         display: flex;
@@ -36,5 +37,11 @@
                 font-family: Space_Mono_Regular;
             }
         }
+    }
+}
+
+@media (max-width : 768px){
+    .primary-features-wrapper{
+        justify-content: center;
     }
 }

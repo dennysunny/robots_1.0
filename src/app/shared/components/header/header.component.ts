@@ -10,18 +10,23 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  baseHeaderUrl :string = 'assets/images/header/Logo-header.svg'
+  baseHeaderUrl :string = 'assets/images/header/'
   headerRoutes = [
     {id: 1, name: 'About', url: '/about'},
     {id: 2, name: 'Community', url: '/community'},
     {id: 3, name: 'Collection', url: '/collections'}
   ]
+  shouldExpandMenu :boolean = false;
 
   //Services
   #router = inject(Router);
 
   navigateToSelectedRoute(path :string){
     this.#router.navigate([`robots/${path}`])
+  }
+
+  toggleHeaderMenuList(){
+    this.shouldExpandMenu = !this.shouldExpandMenu;
   }
 
 }

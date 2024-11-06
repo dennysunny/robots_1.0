@@ -1,8 +1,20 @@
 <div class="header-wrapper">
-    <div (click)="navigateToSelectedRoute('')" style="cursor: pointer;">
-        <img [src]="baseHeaderUrl" alt="robots-logo">
+    <div>
+        <img 
+        [src]="baseHeaderUrl+'Logo-header.svg'" 
+        alt="robots-logo"
+        (click)="navigateToSelectedRoute('')" 
+        style="cursor: pointer;"
+        >
+        <button 
+        class="expand-header-routes"
+        (click)="toggleHeaderMenuList()"
+        >
+            <img [src]="baseHeaderUrl+'hamburger-menu.svg'" alt="robots-logo">
+        </button>
     </div>
-    <div class="header-routes">
+
+    <div class="header-routes" [class.visible]="shouldExpandMenu" >
         @for(route of headerRoutes; track route.id){
             @if(route.name.toLowerCase()=='collection'){
                 <button (click)="navigateToSelectedRoute(route.url)">{{route.name}} </button>

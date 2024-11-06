@@ -15,7 +15,6 @@
         text-align: center;
         @include header-style(60px);
         color: $default-text-color;
-        padding-bottom: 40px;
     }
     
     .accordion-box{
@@ -23,9 +22,18 @@
         padding: 20px 24px;
         cursor: pointer;
 
-        .accordion-title{
-            color: $default-text-color;
-            @include header-style(36px);
+        .accordion-content-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .accordion-header{
+                color: $default-text-color;
+                @include header-style(36px);
+            }
+            img.open{
+                transform: rotate(180deg);
+            }
         }
 
         .expanded-accordion{
